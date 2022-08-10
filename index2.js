@@ -87,19 +87,22 @@ function edi(e){
     e.preventDefault()
     if(e.target.classList.contains("edt")){
     console.log("h")
-    let s=localStorage.getItem( e.target.parentElement.id)
-    console.log("f")
-    let obj = JSON.parse(s)
+let a= e.target.parentElement
+    axios.get(`https://crudcrud.com/api/8a22f49da6b54d2a9731d8f0943ef8fb/adduser/${a.id}`)
+    .then((reponse)=>)
+//     let s=localStorage.getItem( e.target.parentElement.id)
+//     console.log("f")
+//     let obj = JSON.parse(s)
     
-    ex.value=obj.expense
-    cd.value=obj.cd
-   cc.value=obj.cc
+//     ex.value=obj.expense
+//     cd.value=obj.cd
+//    cc.value=obj.cc
    
 
-   let a= e.target.parentElement
-   // console.log(a.id)
-    localStorage.removeItem(a.id)
-       ul.removeChild(a)
+//    let a= e.target.parentElement
+//    // console.log(a.id)
+//     localStorage.removeItem(a.id)
+//        ul.removeChild(a)
    
      
      }
